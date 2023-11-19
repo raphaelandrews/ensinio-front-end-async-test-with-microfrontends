@@ -2,7 +2,7 @@
 
 This is a test for an internship opportunity at [Ensinio](https://ensinio.com). Built by **[ndrws](https://ndrws.dev).**
 
-Another version with Next.js 14 App router and without microfrontends can be found [here](https://github.com/raphaelandrews/ensinio-front-end-async-test).
+Another version with Next.js 14 App router and without microfrontends can be found **[here](https://github.com/raphaelandrews/ensinio-front-end-async-test)**.
 
 **[Test requirements](https://github.com/EnsinioOrg/front-end-async-test)** <br/>
 
@@ -38,6 +38,8 @@ git clone https://github.com/raphaelandrews/ensinio-front-end-async-test-with-mi
 cd ensinio-front-end-async-test-with-microfrontends
 code .
 ```
+
+Use the Environment Variables like the .env.example
 
 ### Build
 

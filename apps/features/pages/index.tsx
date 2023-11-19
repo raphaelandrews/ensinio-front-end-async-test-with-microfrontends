@@ -1,5 +1,6 @@
-import Features from '@/components/features'
-import Head from 'next/head'
+import Head from 'next/head';
+
+import Features from '@/components/features';
 
 import { Inter, Bricolage_Grotesque } from 'next/font/google';
 
@@ -38,9 +39,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="250x250" />
       </Head>
       <main className={`${primary.variable} ${secondary.variable}`}>
-        <>
           <Features />
-        </>
       </main>
     </>
   )

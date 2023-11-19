@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { lazy } from 'react';
 import { Inter, Bricolage_Grotesque } from 'next/font/google';
+
 import Header from '@/components/header/header';
 
 const primary = Inter({

@@ -1,10 +1,10 @@
 import * as S from './hero-icons.styles';
 
+import { CertifiedIcon } from "ui/assets/icons/certified-icon";
+import { PlaylistsIcon } from "ui/assets/icons/playlists-icon";
 import PingAnimate from "@/animations/ping-animate";
 import ShakeAnimate from "@/animations/shake-animate";
 import JumpAnimate from "@/animations/jump-animate";
-import { CertifiedIcon } from "ui/assets/icons/certified-icon";
-import { PlaylistsIcon } from "ui/assets/icons/playlists-icon";
 
 const HomeIcons = () => {
     return (

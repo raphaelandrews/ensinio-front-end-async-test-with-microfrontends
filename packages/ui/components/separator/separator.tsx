@@ -7,15 +7,13 @@ interface SeparatorProps {
     className?: string;
 }
 
-const Separator = ({ width, height, backgroundcolor, className }: SeparatorProps) => {
+export function Separator({ width, height, backgroundcolor, className }: SeparatorProps): JSX.Element {
     return (
         <S.Separator
-            width={width}
-            height={height}
             backgroundcolor={backgroundcolor}
             className={className}
+            height={height}
+            width={width}
         />
     );
 }
-
-export default Separator;

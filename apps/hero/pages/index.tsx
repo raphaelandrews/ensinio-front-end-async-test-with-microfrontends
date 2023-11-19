@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Hero from '@/components/hero/hero';
-
 import { Inter, Bricolage_Grotesque } from 'next/font/google';
+import Head from 'next/head';
+
+import Hero from '@/components/hero/hero';
 
 const primary = Inter({
   subsets: ['latin'],
@@ -38,9 +38,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="250x250" />
       </Head>
       <main className={`${primary.variable} ${secondary.variable}`}>
-        <>
-          <Hero />
-        </>
+        <Hero />
       </main>
     </>
   )

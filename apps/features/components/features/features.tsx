@@ -5,8 +5,8 @@ import * as S from "./features.styles";
 import { featuresImage } from '@/utils/format-image';
 import { FeatureItem } from '@/types/Features';
 
-import { Container } from 'ui/container/container';
-import Separator from '@/components/separator/separator';
+import { Container } from 'ui/components/container/container';
+import { Separator } from 'ui/components/separator/separator';
 import PingAnimate from '@/animations/ping-animate';
 import { useNextHostTranslation } from "i18next-shared-lib/i18n/useNextHostTranslation";
 import i18nService from "i18next-shared-lib/lib/i18nService";
@@ -42,7 +42,7 @@ const animationVariants: AnimationVariants = {
     },
 };
 
-const FeaturesComponent = ({ data }: FeaturesProps) => {
+const Features = ({ data }: FeaturesProps) => {
     const { t } = useNextHostTranslation('features');
 
     const getCurrentLanguage = () => {
@@ -103,4 +103,4 @@ const FeaturesComponent = ({ data }: FeaturesProps) => {
     );
 }
 
-export default FeaturesComponent;
+export default Features;

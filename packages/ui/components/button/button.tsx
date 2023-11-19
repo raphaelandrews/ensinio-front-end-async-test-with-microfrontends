@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-
+import type { ReactNode } from 'react';
 import * as S from './button.styles';
 
 interface ButtonProps {
@@ -9,12 +8,12 @@ interface ButtonProps {
     onMouseEnter?: () => void;
 }
 
-export const Button = ({
+export function Button({
     className,
     children,
     onClick,
     onMouseEnter
-}: ButtonProps) => {
+}: ButtonProps): JSX.Element {
     return (
         <S.Button
             className={className}
@@ -26,7 +25,7 @@ export const Button = ({
     );
 }
 
-export const OutlineButton = ({ children }: ButtonProps) => {
+export function OutlineButton({ children }: ButtonProps): JSX.Element {
     return (
         <S.OutlineButton>
             {children}

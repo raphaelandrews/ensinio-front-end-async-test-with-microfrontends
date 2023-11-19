@@ -8,9 +8,10 @@ import { DevicesIcon } from "ui/assets/icons/devices-icon";
 import { PlayIcon } from "ui/assets/icons/play-icon";
 import FadeInAnimate from '@/animations/fadein-animate';
 import ZoomAnimate from '@/animations/zoom-animate';
-import { Button } from '@/components/button/button';
+
+import { Container } from 'ui/components/container/container';
+import { Button } from 'ui/components/button/button';
 import HeroIcons from "@/components/hero-icons/hero-icons";
-import Container from '@/components/container/container';
 
 const heroUrl = process.env.HERO_URL || `http://localhost:3001`;
 

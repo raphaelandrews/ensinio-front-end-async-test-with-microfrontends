@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 import * as S from './solutions-menu.styles';
+
 import { useNextHostTranslation } from "i18next-shared-lib/i18n/useNextHostTranslation";
 import useSolutionsStore from '@/hooks/use-solutions-menu';
 import ClickOutsideHandler from '@/hooks/use-click-outside';

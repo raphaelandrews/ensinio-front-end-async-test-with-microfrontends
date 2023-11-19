@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 
 import * as S from './language-menu.styles';
+
+import i18nService from "i18next-shared-lib/lib/i18nService";
 import useLanguageStore from "@/hooks/use-language-menu";
 import ClickOutsideHandler from "@/hooks/use-click-outside";
 import FormatLocaleFlag from "@/utils/format-locale-flag";
 
 import { CheckIcon } from "ui/assets/icons/check-icon";
-import i18nService from "i18next-shared-lib/lib/i18nService";
 
 const LanguageMenu = () => {
     const { setLanguageOpen } = useLanguageStore();

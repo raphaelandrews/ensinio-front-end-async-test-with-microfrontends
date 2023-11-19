@@ -1,38 +1,35 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 
 import * as S from './header.styles';
+
 import { useNextHostTranslation } from "i18next-shared-lib/i18n/useNextHostTranslation";
 import i18nService from "i18next-shared-lib/lib/i18nService";
 import useSolutionsStore from '@/hooks/use-solutions-menu';
 import useLanguageStore from '@/hooks/use-language-menu';
 import FormatLocaleFlag from '@/utils/format-locale-flag';
 
-import PingAnimate from '@/animations/ping-animate';
-import ZoomAnimate from '@/animations/zoom-animate';
-import FadeInAnimate from '@/animations/fadein-animate';
-
 import { LogoEnsinio } from "ui/assets/icons/logo-ensinio";
 import { ChevronsDownIcon } from "ui/assets/icons/chevrons-down-icon";
 import { PersonIcon } from "ui/assets/icons/person-icon";
 
-import Separator from '@/components/separator/separator';
-import Container from '@/components/container/container';
+import PingAnimate from '@/animations/ping-animate';
+import ZoomAnimate from '@/animations/zoom-animate';
+import FadeInAnimate from '@/animations/fadein-animate';
+
+import { Separator } from 'ui/components/separator/separator';
+import { Container } from 'ui/components/container/container';
+import { Button, OutlineButton } from 'ui/components/button/button';
 import LanguageMenu from './components/language-menu/language-menu';
-import { Button, OutlineButton } from '@/components/button/button';
 import SolutionsMenu from './components/solutions-menu/solutions-menu';
 
 const Header = () => {
     const { solutionsOpen, setSolutionsOpen } = useSolutionsStore();
     const { languageOpen, setLanguageOpen } = useLanguageStore();
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
-    const pathName = usePathname();
     const controls = useAnimation();
     const { t } = useNextHostTranslation('navbar');
-
-    const activeLocale = pathName.substring(1);
 
     const rotateSolutions = solutionsOpen ? 180 : 0;
     const rotateLanguage = languageOpen ? 180 : 0;

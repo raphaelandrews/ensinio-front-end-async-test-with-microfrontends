@@ -1,81 +1,56 @@
-# Turborepo starter
+# Ensinio Frontend Async Test with Microfrontends
 
-This is an official starter Turborepo.
+This is a test for an internship opportunity at [Ensinio](https://ensinio.com). Built by **[ndrws](https://ndrws.dev).**
 
-## Using this example
+Another version with Next.js 14 App router and without microfrontends can be found [here](https://github.com/raphaelandrews/ensinio-front-end-async-test).
 
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
+**[Test requirements](https://github.com/EnsinioOrg/front-end-async-test)** <br/>
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+This is a monorepo microfrontend with Turborepo and Module Federation and includes the following packages/apps:
 
-### Apps and Packages
+## Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `host`: The container application with Next.js 13 pages router who encapsulates the other applications.
+- `hero`: Another Next.js App with the Hero section.
+- `features`: Another Next.js App with the Features section.
+- `ui`: A stub React component library shared by all applications.
+- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`).
+- `tsconfig`: `tsconfig.json`s used throughout the monorepo.
+- `i18Next-Shared-lib`: This implements the i18n in all applications.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## Stack
 
-### Utilities
+- **Deployment**: Vercel
+- **Framework**: Next.js 13 Pages router with Typescript for all applications.
+- **Styling**: Styled-components. Note: Imported Bricolage Grotesque instead Degular font.
+- **Animations**: Framer-motion. Since Ensinio uses Framer for their landing page, I chose framer-motion for animations instead of raw CSS. Not the same thing as use framer, but definitely a thing.
+- **State management**: Zustand.
+- **Tests**: Jest and React Testing Library
+- **i18n**: React i18next
+- **Package management**: PNPM
 
-This Turborepo has some additional tools already setup for you:
+## Run
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+```
+git clone https://github.com/raphaelandrews/ensinio-front-end-async-test-with-microfrontends.git
+cd ensinio-front-end-async-test-with-microfrontends
+code .
+```
 
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 pnpm build
 ```
 
-### Develop
+### App
 
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 pnpm dev
 ```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
